@@ -9,14 +9,34 @@
 </h:head>
 <h:body>
 Este é o Editor polo  - ANTONIO CESAR POLO
+<br></br>
+	<!-- Insere linhas -->
+	<br></br>
 
-<p:clock></p:clock>
+	<h:form>
+		<p:clock></p:clock>
 
-<p:editor />
+		<br></br>
+		<!-- Insere linhas -->
+		<br></br>
 
-	<h3>Cursor</h3>
+		<p:editor />
 
+<br></br>
+	<!-- Insere linhas -->
+	<br></br>
 	
+		<p:remoteCommand name="rc" update="msgs"
+			actionListener="#{remoteCommandView.execute}" />
+
+		<p:growl id="msgs" showDetail="true" />
+		<p:commandButton type="button" onclick="rc()" value="Execute"
+			icon="ui-icon-refresh" />
+	</h:form>
+	
+	<br></br>
+	<!-- Insere linhas -->
+	<br></br>
 
 	<p:knob cursor="true" value="0" />
 
