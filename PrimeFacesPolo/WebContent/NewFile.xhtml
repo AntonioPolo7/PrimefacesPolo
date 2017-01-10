@@ -41,7 +41,16 @@ Este é o Editor polo  - ANTONIO CESAR POLO
 	<p:knob cursor="true" value="0" />
 
 
-
+<h:form>
+    <p:growl id="messages" />
+ 
+    <p:splitButton value="Save" actionListener="#{buttonView.save}" update="messages" icon="ui-icon-disk">
+        <p:menuitem value="Update" actionListener="#{buttonView.update}" update="messages" icon="ui-icon-arrowrefresh-1-w" />
+        <p:menuitem value="Delete" actionListener="#{buttonView.delete}" ajax="false" icon="ui-icon-close" />
+        <p:separator />
+        <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="ui-icon-extlink" />
+    </p:splitButton>
+</h:form>
 
 
 </h:body>
